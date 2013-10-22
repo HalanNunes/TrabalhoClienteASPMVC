@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CLIENTEModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="CLIENTEModelStoreContainer">
+          <EntitySet Name="CLIENTE" EntityType="CLIENTEModel.Store.CLIENTE" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="CD_CLIENTE" />
+          </Key>
+          <Property Name="CD_CLIENTE" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NM_CLIENTE" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="DS_EMAIL" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="CD_SEXO" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="VL_SALDO_CREDITOS" Type="decimal" Nullable="false" Precision="3" />
+          <Property Name="DS_LOGRADOURO" Type="varchar" MaxLength="200" />
+          <Property Name="NR_LOGRADOURO" Type="int" />
+          <Property Name="DS_COMPLEMENTO" Type="varchar" MaxLength="100" />
+          <Property Name="NM_BAIRRO" Type="varchar" MaxLength="50" />
+          <Property Name="NM_CIDADE" Type="varchar" MaxLength="30" />
+          <Property Name="SG_ESTADO" Type="varchar" MaxLength="2" />
+          <Property Name="NR_CEP" Type="varchar" MaxLength="8" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CLIENTEModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CLIENTEEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="CLIENTE" EntityType="CLIENTEModel.CLIENTE" />
+        </EntityContainer>
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="CD_CLIENTE" />
+          </Key>
+          <Property Name="CD_CLIENTE" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NM_CLIENTE" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DS_EMAIL" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CD_SEXO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="VL_SALDO_CREDITOS" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="DS_LOGRADOURO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="NR_LOGRADOURO" Type="Int32" />
+          <Property Name="DS_COMPLEMENTO" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NM_BAIRRO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="NM_CIDADE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="SG_ESTADO" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="NR_CEP" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CLIENTEModelStoreContainer" CdmEntityContainer="CLIENTEEntities">
+          <EntitySetMapping Name="CLIENTE">
+            <EntityTypeMapping TypeName="CLIENTEModel.CLIENTE">
+              <MappingFragment StoreEntitySet="CLIENTE">
+                <ScalarProperty Name="CD_CLIENTE" ColumnName="CD_CLIENTE" />
+                <ScalarProperty Name="NM_CLIENTE" ColumnName="NM_CLIENTE" />
+                <ScalarProperty Name="DS_EMAIL" ColumnName="DS_EMAIL" />
+                <ScalarProperty Name="CD_SEXO" ColumnName="CD_SEXO" />
+                <ScalarProperty Name="VL_SALDO_CREDITOS" ColumnName="VL_SALDO_CREDITOS" />
+                <ScalarProperty Name="DS_LOGRADOURO" ColumnName="DS_LOGRADOURO" />
+                <ScalarProperty Name="NR_LOGRADOURO" ColumnName="NR_LOGRADOURO" />
+                <ScalarProperty Name="DS_COMPLEMENTO" ColumnName="DS_COMPLEMENTO" />
+                <ScalarProperty Name="NM_BAIRRO" ColumnName="NM_BAIRRO" />
+                <ScalarProperty Name="NM_CIDADE" ColumnName="NM_CIDADE" />
+                <ScalarProperty Name="SG_ESTADO" ColumnName="SG_ESTADO" />
+                <ScalarProperty Name="NR_CEP" ColumnName="NR_CEP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
