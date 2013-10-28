@@ -1,0 +1,27 @@
+﻿@using System.Web.Optimization
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="../../../Areas/Content/Index.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div id="logout">
+                @Html.ActionLink("Logoff", "Logoff", "Account")
+            </div>
+        </header>
+        <nav id="menu">
+            <ul>
+                <li>@Html.ActionLink("Cadastro", "Create", "Cliente")</li>
+                <li>@Html.ActionLink("Consulta", "Index", "Cliente")</li>
+            </ul>
+        </nav>
+        <aside id="content"></aside>
+        <footer></footer>
+    </form>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+</body>
+</html>

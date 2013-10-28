@@ -1,0 +1,30 @@
+﻿@model TrabalhoClienteASPMVC.Areas.Cliente.Models.AccountCliente
+
+@{
+    ViewBag.Title = "View1";
+}
+
+<html>
+    <head>
+        <title>Login no Sistema</title>
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <aside>
+            <div style="margin:0 auto; display:table">
+                @using (Html.BeginForm())
+                {
+                    @Html.EditorForModel();
+                    <input type="submit" value="Login" />
+                }
+            </div>
+        </aside>
+        <footer></footer>
+    </body>
+</html>

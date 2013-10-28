@@ -20,6 +20,12 @@ namespace TrabalhoClienteASPMVC.Areas.Cliente.Controllers
             return View(db.CLIENTE.ToList());
         }
 
+        [Authorize]
+        public ActionResult IndexPage()
+        {
+            return View();
+        }
+
         //
         // GET: /Cliente/Cliente/Details/5
 

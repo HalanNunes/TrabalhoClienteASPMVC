@@ -121,8 +121,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Areas\Cliente\ClienteAreaRegistration.cs" />
+    <Compile Include="Areas\Cliente\Controllers\AccountController.cs" />
     <Compile Include="Areas\Cliente\Controllers\ClienteController.cs" />
+    <Compile Include="Areas\Cliente\Models\AccountCliente.cs" />
     <Compile Include="Cliente.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -150,7 +153,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Areas\Content\Index.css" />
     <Content Include="Global.asax" />
+    <Content Include="Areas\Cliente\Views\Cliente\IndexPage.cshtml" />
+    <Content Include="Areas\Cliente\Views\Account\LogOn.cshtml" />
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -159,11 +171,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
+    <Content Include="Scripts\jquery-2.0.3.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Cliente\Models\" />
     <Folder Include="Areas\Cliente\Views\Shared\" />
+    <Folder Include="Areas\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -209,6 +222,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Cliente\Views\Cliente\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
